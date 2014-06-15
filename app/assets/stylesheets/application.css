@@ -13,3 +13,44 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+ 	margin-top: 50px;
+ }
+
+.jumbotron {
+	background-image:url(/assets/hero.jpg);
+	background-repeat:no-repeat;
+	background-size: 100%;
+	background-position:left top;
+	
+}
+
+.jumbotron h1{
+	color: white !important; 
+	text-align: right;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 4em;
+	margin-top: 0px;
+	margin-bottom: 70px;
+}
+
+.about_pic_row{
+	text-align: center;
+}
+
+.about_pic{
+	border:1px solid #656565;
+    border-radius: 215px;
+    -webkit-border-radius: 215px;
+    -moz-border-radius: 215px;
+    margin-right: 10px;
+}
+
+.about_me{
+	padding-top: 30px;
+}
+
+.full_page {
+	height: 100%;
+}
