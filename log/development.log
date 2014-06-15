@@ -4175,3 +4175,242 @@ Started GET "/assets/me.jpg" for 127.0.0.1 at 2014-06-15 22:19:21 +0530
 
 
 Started GET "/assets/hero.jpg" for 127.0.0.1 at 2014-06-15 22:19:22 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 22:27:19 +0530
+Processing by FrontPageController#home as HTML
+  Rendered front_page/_about.html.erb (0.3ms)
+  Rendered front_page/_projects.html.erb (0.2ms)
+  Rendered front_page/_contact.html.erb (0.2ms)
+  Rendered front_page/home.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+  Rendered layouts/_hero.html.erb (0.2ms)
+Completed 200 OK in 91ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 22:27:20 +0530
+Processing by FrontPageController#home as HTML
+  Rendered front_page/_about.html.erb (0.0ms)
+  Rendered front_page/_projects.html.erb (0.0ms)
+  Rendered front_page/_contact.html.erb (0.0ms)
+  Rendered front_page/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-15 22:27:20 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 22:27:20 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:20 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:20 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:20 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:20 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:20 +0530
+
+
+Started GET "/assets/me.jpg" for 127.0.0.1 at 2014-06-15 22:27:20 +0530
+
+
+Started GET "/assets/hero.jpg" for 127.0.0.1 at 2014-06-15 22:27:20 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 22:27:31 +0530
+Processing by FrontPageController#home as HTML
+  Rendered front_page/_about.html.erb (0.0ms)
+  Rendered front_page/_projects.html.erb (0.0ms)
+  Rendered front_page/_contact.html.erb (0.0ms)
+  Rendered front_page/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-15 22:27:31 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:31 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:31 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 22:27:31 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:31 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:31 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:31 +0530
+
+
+Started GET "/assets/me.jpg" for 127.0.0.1 at 2014-06-15 22:27:31 +0530
+
+
+Started GET "/assets/hero.jpg" for 127.0.0.1 at 2014-06-15 22:27:31 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 22:27:44 +0530
+Processing by FrontPageController#home as HTML
+  Rendered front_page/_about.html.erb (0.0ms)
+  Rendered front_page/_projects.html.erb (0.0ms)
+  Rendered front_page/_contact.html.erb (0.0ms)
+  Rendered front_page/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-15 22:27:44 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 22:27:44 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:44 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:44 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:44 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:44 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 22:27:44 +0530
+
+
+Started GET "/assets/me.jpg" for 127.0.0.1 at 2014-06-15 22:27:44 +0530
+
+
+Started GET "/assets/hero.jpg" for 127.0.0.1 at 2014-06-15 22:27:44 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 22:28:23 +0530
+Processing by FrontPageController#home as HTML
+  Rendered front_page/_about.html.erb (0.0ms)
+  Rendered front_page/_projects.html.erb (0.0ms)
+  Rendered front_page/_contact.html.erb (0.0ms)
+  Rendered front_page/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-15 22:28:23 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 22:28:23 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 22:28:23 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 22:28:23 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-15 22:28:23 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-15 22:28:23 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 22:28:23 +0530
+
+
+Started GET "/assets/me.jpg" for 127.0.0.1 at 2014-06-15 22:28:23 +0530
+
+
+Started GET "/assets/hero.jpg" for 127.0.0.1 at 2014-06-15 22:28:24 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 22:28:42 +0530
+Processing by FrontPageController#home as HTML
+  Rendered front_page/_about.html.erb (0.0ms)
+  Rendered front_page/_projects.html.erb (0.0ms)
+  Rendered front_page/_contact.html.erb (0.0ms)
+  Rendered front_page/home.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-15 22:28:42 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 22:28:42 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 22:28:42 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 22:28:42 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-15 22:28:42 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-15 22:28:42 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 22:28:42 +0530
+
+
+Started GET "/assets/me.jpg" for 127.0.0.1 at 2014-06-15 22:28:42 +0530
+
+
+Started GET "/assets/hero.jpg" for 127.0.0.1 at 2014-06-15 22:28:42 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 22:29:07 +0530
+Processing by FrontPageController#home as HTML
+  Rendered front_page/_about.html.erb (0.0ms)
+  Rendered front_page/_projects.html.erb (0.0ms)
+  Rendered front_page/_contact.html.erb (0.0ms)
+  Rendered front_page/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-15 22:29:07 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 22:29:07 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 22:29:07 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 22:29:07 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-15 22:29:07 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-15 22:29:07 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 22:29:07 +0530
+
+
+Started GET "/assets/me.jpg" for 127.0.0.1 at 2014-06-15 22:29:07 +0530
+
+
+Started GET "/assets/hero.jpg" for 127.0.0.1 at 2014-06-15 22:29:08 +0530
