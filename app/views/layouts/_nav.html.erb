@@ -19,7 +19,12 @@
       		<li><%= link_to "Contact", front_page_home_path%></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><%= link_to "Sign in",   front_page_home_path %></li>
+	      	<% if signed_in? %>
+	        	<li><%= link_to @current_user.first_name, current_user %></li>
+	        	<li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+	        <% else %>
+	        	<li><%= link_to "Sign in", new_session_path %></li>
+	        <% end %>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
