@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 	before_save { self.email = email.downcase }
 	has_secure_password
 	validates :password, length: { minimum: 6 }
+	has_many :projects, dependent: :destroy
 
 	def User.new_remember_token
     	SecureRandom.urlsafe_base64

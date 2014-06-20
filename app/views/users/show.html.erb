@@ -14,5 +14,10 @@
   <%= @user.email %>
 </p>
 
+<p>
+	<h3>Projects: (<%= @user.projects.count %>)</h3>
+</p>
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

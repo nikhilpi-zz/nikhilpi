@@ -13856,3 +13856,1241 @@ Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.5ms)
 
 
 Started GET "/assets/me.jpg" for 127.0.0.1 at 2014-06-18 21:23:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProjects (20140620161821)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (44.9ms)[0m  [1mCREATE TABLE "projects" ("id" serial primary key, "name" character varying(255), "description" text, "start_date" date, "end_date" date, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140620161821"]]
+  [1m[36m (124.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-20 22:37:57 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FrontPageController#home as HTML
+  Rendered front_page/_about.html.erb (0.3ms)
+  Rendered front_page/_projects.html.erb (0.3ms)
+  Rendered front_page/_contact.html.erb (0.2ms)
+  Rendered front_page/home.html.erb within layouts/application (10.4ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '6b0bfce825cb46d76aa665a37be3a1310c65084c' LIMIT 1
+  Rendered layouts/_nav.html.erb (42.2ms)
+  Rendered layouts/_hero.html.erb (0.4ms)
+Completed 200 OK in 345ms (Views: 331.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/me.jpg" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/assets/hero.jpg" for 127.0.0.1 at 2014-06-20 22:37:58 +0530
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-06-20 22:37:59 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (20.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '6b0bfce825cb46d76aa665a37be3a1310c65084c' LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (2.7ms)
+  Rendered layouts/_hero.html.erb (0.4ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zj0VM3CjsZ0zvRLIDF+YELuiR6R4U4dkPFZk+Om8moM=", "session"=>{"email"=>"nikhilpai2016@u.northwestern.edu", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'nikhilpai2016@u.northwestern.edu' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 7  [["remember_token", "50fe220d1499a969df97db7e21c7463d4c6b89f3"], ["updated_at", "2014-06-20 17:08:05.158464"]]
+  [1m[36m (106.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/7/edit
+Completed 302 Found in 209ms (ActiveRecord: 110.2ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '50fe220d1499a969df97db7e21c7463d4c6b89f3' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "7"]]
+  Rendered users/_form.html.erb (6.0ms)
+  Rendered users/edit.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:05 +0530
+
+
+Started GET "/users/7" for 127.0.0.1 at 2014-06-20 22:38:10 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "projects"  WHERE "projects"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"  WHERE "projects"."user_id" = $1  ORDER BY end_date DESC  [["user_id", 7]]
+  Rendered collection (0.0ms)
+  Rendered users/show.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '50fe220d1499a969df97db7e21c7463d4c6b89f3' LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (3.1ms)
+  Rendered layouts/_hero.html.erb (0.1ms)
+Completed 200 OK in 74ms (Views: 13.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '50fe220d1499a969df97db7e21c7463d4c6b89f3' LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (1.6ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/assets/hero.jpg" for 127.0.0.1 at 2014-06-20 22:38:15 +0530
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"   ORDER BY end_date DESC
+  Rendered projects/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '50fe220d1499a969df97db7e21c7463d4c6b89f3' LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (1.7ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:38:20 +0530
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-06-20 22:38:22 +0530
+Processing by ProjectsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '50fe220d1499a969df97db7e21c7463d4c6b89f3' LIMIT 1
+  Rendered projects/_form.html.erb (20.7ms)
+  Rendered projects/new.html.erb within layouts/application (22.3ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zj0VM3CjsZ0zvRLIDF+YELuiR6R4U4dkPFZk+Om8moM=", "project"=>{"name"=>"test", "description"=>"test", "start_date(1i)"=>"2014", "start_date(2i)"=>"6", "start_date(3i)"=>"20", "end_date(1i)"=>"2014", "end_date(2i)"=>"6", "end_date(3i)"=>"21", "user_id"=>""}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '50fe220d1499a969df97db7e21c7463d4c6b89f3' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "projects" ("created_at", "description", "end_date", "name", "start_date", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-06-20 17:10:09.608364"], ["description", "test"], ["end_date", "2014-06-21"], ["name", "test"], ["start_date", "2014-06-20"], ["updated_at", "2014-06-20 17:10:09.608364"], ["user_id", 7]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 18ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (2.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1  ORDER BY end_date DESC LIMIT 1[0m  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '50fe220d1499a969df97db7e21c7463d4c6b89f3' LIMIT 1
+  Rendered layouts/_nav.html.erb (4.0ms)
+  Rendered layouts/_hero.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 13.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:40:09 +0530
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-06-20 22:40:16 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "projects".* FROM "projects"   ORDER BY end_date DESC[0m
+  Rendered projects/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '50fe220d1499a969df97db7e21c7463d4c6b89f3' LIMIT 1
+  Rendered layouts/_nav.html.erb (2.3ms)
+  Rendered layouts/_hero.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2014-06-20 22:40:21 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "projects"  WHERE "projects"."user_id" = $1  [["user_id", 7]]
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"  WHERE "projects"."user_id" = $1  ORDER BY end_date DESC[0m  [["user_id", 7]]
+  Rendered users/show.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (Missing partial projects/_project with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/nikhilpai/Documents/App Dev/nikhilpi/app/views"
+):
+    19: </p>
+    20: 
+    21: <ol class="microposts">
+    22:   <%= render @projects %>
+    23: </ol>
+    24: 
+    25: <%= link_to 'Edit', edit_user_path(@user) %> |
+  app/views/users/show.html.erb:22:in `_app_views_users_show_html_erb__1198683577294027546_70276533471780'
+
+
+  Rendered /Users/nikhilpai/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/nikhilpai/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/nikhilpai/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.6ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2014-06-20 22:40:21 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "projects"  WHERE "projects"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"  WHERE "projects"."user_id" = $1  ORDER BY end_date DESC  [["user_id", 7]]
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (Missing partial projects/_project with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/nikhilpai/Documents/App Dev/nikhilpi/app/views"
+):
+    19: </p>
+    20: 
+    21: <ol class="microposts">
+    22:   <%= render @projects %>
+    23: </ol>
+    24: 
+    25: <%= link_to 'Edit', edit_user_path(@user) %> |
+  app/views/users/show.html.erb:22:in `_app_views_users_show_html_erb__1198683577294027546_70276516515620'
+
+
+  Rendered /Users/nikhilpai/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/nikhilpai/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/nikhilpai/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.5ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "projects"  WHERE "projects"."user_id" = $1  [["user_id", 7]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '50fe220d1499a969df97db7e21c7463d4c6b89f3' LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (1.8ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:06 +0530
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zj0VM3CjsZ0zvRLIDF+YELuiR6R4U4dkPFZk+Om8moM="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '50fe220d1499a969df97db7e21c7463d4c6b89f3' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 7  [["remember_token", "ccd0f79aa72e3dcbe9d29fb168b7056f1600be67"], ["updated_at", "2014-06-20 17:11:30.619528"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_nav.html.erb (1.6ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:30 +0530
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects"   ORDER BY end_date DESC[0m
+  Rendered projects/index.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_nav.html.erb (1.4ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:35 +0530
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-06-20 22:41:40 +0530
+Processing by ProjectsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-06-20 22:41:40 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_nav.html.erb (1.4ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:40 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:40 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:40 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:40 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:40 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:40 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:41 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:41 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:41 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:41 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:41 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:41 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:41 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:41 +0530
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.7ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1  ORDER BY end_date DESC LIMIT 1[0m  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_nav.html.erb (1.3ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:41:54 +0530
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-06-20 22:41:56 +0530
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1  ORDER BY end_date DESC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-20 22:41:56 +0530
+Processing by FrontPageController#home as HTML
+  Rendered front_page/_about.html.erb (0.5ms)
+  Rendered front_page/_projects.html.erb (0.2ms)
+  Rendered front_page/_contact.html.erb (0.3ms)
+  Rendered front_page/home.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_nav.html.erb (2.4ms)
+  Rendered layouts/_hero.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/me.jpg" for 127.0.0.1 at 2014-06-20 22:41:56 +0530
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-06-20 22:42:39 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects"   ORDER BY end_date DESC[0m
+  Rendered projects/index.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_nav.html.erb (1.5ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-06-20 22:42:45 +0530
+Processing by ProjectsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-06-20 22:42:45 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_nav.html.erb (1.7ms)
+  Rendered layouts/_hero.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zj0VM3CjsZ0zvRLIDF+YELuiR6R4U4dkPFZk+Om8moM=", "session"=>{"email"=>"nikhilpai2016@u.northwestern.edu", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'nikhilpai2016@u.northwestern.edu' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 7[0m  [["remember_token", "760c81b7b6f4a918cafc0cead8a2c6a8e5b19640"], ["updated_at", "2014-06-20 17:12:50.161775"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/projects/new
+Completed 302 Found in 64ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+Processing by ProjectsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '760c81b7b6f4a918cafc0cead8a2c6a8e5b19640' LIMIT 1[0m
+  Rendered projects/_form.html.erb (5.7ms)
+  Rendered projects/new.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:42:50 +0530
+
+
+Started POST "/projects" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zj0VM3CjsZ0zvRLIDF+YELuiR6R4U4dkPFZk+Om8moM=", "project"=>{"name"=>"test2", "description"=>"test2", "start_date(1i)"=>"2014", "start_date(2i)"=>"6", "start_date(3i)"=>"20", "end_date(1i)"=>"2014", "end_date(2i)"=>"6", "end_date(3i)"=>"23", "user_id"=>""}, "commit"=>"Create Project"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '760c81b7b6f4a918cafc0cead8a2c6a8e5b19640' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "projects" ("created_at", "description", "end_date", "name", "start_date", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-06-20 17:13:05.838351"], ["description", "test2"], ["end_date", "2014-06-23"], ["name", "test2"], ["start_date", "2014-06-20"], ["updated_at", "2014-06-20 17:13:05.838351"], ["user_id", 7]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.4ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1  ORDER BY end_date DESC LIMIT 1  [["id", 2]]
+  Rendered projects/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '760c81b7b6f4a918cafc0cead8a2c6a8e5b19640' LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (2.1ms)
+  Rendered layouts/_hero.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:05 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:06 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:06 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:06 +0530
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-06-20 22:43:07 +0530
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.5ms)[0m  SELECT "projects".* FROM "projects"   ORDER BY end_date DESC
+  Rendered projects/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '760c81b7b6f4a918cafc0cead8a2c6a8e5b19640' LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (2.3ms)
+  Rendered layouts/_hero.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-06-20 22:43:14 +0530
+Processing by ProjectsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '760c81b7b6f4a918cafc0cead8a2c6a8e5b19640' LIMIT 1
+  Rendered projects/_form.html.erb (5.2ms)
+  Rendered projects/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2014-06-20 22:43:26 +0530
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zj0VM3CjsZ0zvRLIDF+YELuiR6R4U4dkPFZk+Om8moM=", "project"=>{"name"=>"test 3", "description"=>" test 3", "start_date(1i)"=>"2014", "start_date(2i)"=>"6", "start_date(3i)"=>"13", "end_date(1i)"=>"2014", "end_date(2i)"=>"6", "end_date(3i)"=>"17", "user_id"=>""}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '760c81b7b6f4a918cafc0cead8a2c6a8e5b19640' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "projects" ("created_at", "description", "end_date", "name", "start_date", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-06-20 17:13:26.898575"], ["description", " test 3"], ["end_date", "2014-06-17"], ["name", "test 3"], ["start_date", "2014-06-13"], ["updated_at", "2014-06-20 17:13:26.898575"], ["user_id", 7]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2014-06-20 22:43:26 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.6ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1  ORDER BY end_date DESC LIMIT 1[0m  [["id", 3]]
+  Rendered projects/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '760c81b7b6f4a918cafc0cead8a2c6a8e5b19640' LIMIT 1
+  Rendered layouts/_nav.html.erb (1.6ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:43:26 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:43:26 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:43:26 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:43:26 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:43:26 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:43:26 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:26 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:26 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:27 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:27 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:27 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:27 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:27 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:43:27 +0530
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-06-20 22:43:28 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "projects".* FROM "projects"   ORDER BY end_date DESC[0m
+  Rendered projects/index.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '760c81b7b6f4a918cafc0cead8a2c6a8e5b19640' LIMIT 1
+  Rendered layouts/_nav.html.erb (2.0ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/projects/1" for 127.0.0.1 at 2014-06-20 22:44:02 +0530
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zj0VM3CjsZ0zvRLIDF+YELuiR6R4U4dkPFZk+Om8moM=", "id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1  ORDER BY end_date DESC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '760c81b7b6f4a918cafc0cead8a2c6a8e5b19640' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 6ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-06-20 22:44:02 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "projects".* FROM "projects"   ORDER BY end_date DESC[0m
+  Rendered projects/index.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '760c81b7b6f4a918cafc0cead8a2c6a8e5b19640' LIMIT 1
+  Rendered layouts/_nav.html.erb (3.5ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:02 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:03 +0530
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2014-06-20 22:44:04 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zj0VM3CjsZ0zvRLIDF+YELuiR6R4U4dkPFZk+Om8moM="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = '760c81b7b6f4a918cafc0cead8a2c6a8e5b19640' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = 7[0m  [["remember_token", "74171bde1b24a14bd5b2344d9493ae5c30077f35"], ["updated_at", "2014-06-20 17:14:04.961640"]]
+  [1m[35m (1.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-06-20 22:44:04 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (1.2ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:05 +0530
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"   ORDER BY end_date DESC
+  Rendered projects/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (1.3ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:44:14 +0530
+
+
+Started DELETE "/projects/2" for 127.0.0.1 at 2014-06-20 22:45:00 +0530
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zj0VM3CjsZ0zvRLIDF+YELuiR6R4U4dkPFZk+Om8moM=", "id"=>"2"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1  ORDER BY end_date DESC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+Processing by FrontPageController#home as HTML
+  Rendered front_page/_about.html.erb (0.0ms)
+  Rendered front_page/_projects.html.erb (0.0ms)
+  Rendered front_page/_contact.html.erb (0.0ms)
+  Rendered front_page/home.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (1.6ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/assets/me.jpg" for 127.0.0.1 at 2014-06-20 22:45:01 +0530
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"   ORDER BY end_date DESC
+  Rendered projects/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (1.3ms)
+  Rendered layouts/_hero.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/front_page.css?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/front_page.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-20 22:45:07 +0530
