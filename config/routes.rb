@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   resources :users
 
-  get 'front_page/home'
+  get '/' => 'front_page#home'
 
-  get 'front_page/about'
+  get '/about' => 'front_page#about'
 
-  get 'front_page/contact'
+  get '/contact' => 'front_page#contact'
 
   resources :sessions, only: [:new, :create, :destroy]
   match '/signin',  to: 'sessions#new',         via: 'get'

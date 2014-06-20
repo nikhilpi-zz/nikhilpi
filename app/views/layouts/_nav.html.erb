@@ -1,3 +1,4 @@
+
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
@@ -14,9 +15,9 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li><%= link_to "Home",   front_page_home_path %></li>
-      		<li><%= link_to "About", front_page_home_path%></li>
-      		<li><%= link_to "Contact", front_page_home_path%></li>
+	        <li><%= link_to "Home", root_url %></li>
+      		<li><%= link_to "About", (root_url + "#about")%></li>
+      		<li><%= link_to "Contact", (root_url + "#contact")%></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	      	<% if signed_in? %>
